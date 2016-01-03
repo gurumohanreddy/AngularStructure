@@ -1,0 +1,26 @@
+.loginbox{
+  position: absolute;
+    margin:auto;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .loginbtn,.loginbtn:hover, .loginbtn:focus{
+    background-color: #2ecc71;
+    color: #FFF;
+    border-color: none;
+
+  }
+
+.loginwell{
+  background-color: #FFF;
+}
+
+#login{
+  width:100vw;
+  height: 100vh;
+  background-color: #06283D;
+}
+.header{
+  color: #169cee;
+}
