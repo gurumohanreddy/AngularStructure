@@ -1,1 +1,7 @@
-var myApp = angular.module('skoolforum', ['ngResource', 'ui.router', 'toastr']);
+(function(){
+  'use strict'
+
+  angular
+      .module('skoolforum', ['ngResource', 'ui.router']);
+
+})();

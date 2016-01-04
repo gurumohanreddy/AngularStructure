@@ -1,13 +1,36 @@
-myApp.config(function($stateProvider, $urlRouterProvider) {
+(function() {
+   'use strict';
 
-  $urlRouterProvider.otherwise('/');
+   angular
+     .module('skoolforum')
+     .config(routerConfig);
 
-    $stateProvider
-      .state('login', {
-        url: '/',
-        templateUrl: 'app/login/login.html',
-        controller: 'LoginController',
-        controllerAs: 'login'
-      });
+   /** @ngInject */
+   function routerConfig($stateProvider, $urlRouterProvider) {
+     $stateProvider
+       .state('login', {
+         url: '/',
+         templateUrl: 'app/login/login.html',
+         controller: 'LoginController',
+         controllerAs: 'vm',
+         authenticate:false
+       })
+       .state('home', {
+         url: '/home',
+         templateUrl: 'app/components/home/home.html',
+         controller: 'HomeController',
+         controllerAs: 'vm',
+         authenticate: true
+       })
+       .state('students', {
+         url: '/students',
+         templateUrl: 'app/components/students/students.html',
+         controller: 'StudentController',
+         controllerAs: 'vm',
+         authenticate: true
+       });
 
-  });
+     $urlRouterProvider.otherwise('/');
+   }
+
+ })();

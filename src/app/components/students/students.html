@@ -1,0 +1,86 @@
+<div class="container">
+    <!-- Button trigger modal -->
+  <button type="button" class="modelbox" data-toggle="modal" data-target="#myModal"></button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Add student</h4>
+        </div>
+        <div class="modal-body">
+          <form ng-submit="students.addstudent()">
+          <div class="form-group">
+            <label for="studentname">Student Name</label>
+          <input type="text" class="form-control"  placeholder="Student Name" ng-model="vm.newstudent.studentname">
+          </div>
+          <div class="form-group">
+            <label for="parentname">Parent Name</label>
+          <input type="text" class="form-control" placeholder="Parent Name" ng-model="vm.newstudent.parentname">
+          </div>
+          <div class="form-group">
+            <label for="phone">Contact Info</label>
+          <input type="number" class="form-control"  placeholder="eg:9000000000" ng-model="vm.newstudent.contact">
+          </div>
+          <div class="form-group">
+            <label for="parentemail">Parent email</label>
+          <input type="email" class="form-control"  placeholder="eg:something@gmail.com" ng-model="vm.newstudent.parentemail">
+          </div>
+          <div class="form-group">
+            <label for="class">Class</label>
+          <select class="form-control" ng-model="vm.newstudent.studentclass" >
+            <option value="Kinder Garten">kindergarten</option>
+            <option value="LKG">LKG</option>
+            <option value="UKG">UKG</option>
+          </select>
+          </div>
+          <div class="form-group">
+            <label for="roll_no">Roll No:</label>
+          <input type="number" class="form-control"  placeholder="123" ng-model="vm.newstudent.rollno">
+          </div>
+<!--
+          <div class="form-group">
+          <label for="inputfile">Student Pic</label>
+        <input type="file" id ="fileinput" ng-click = "students.tingu()">
+        </div> -->
+          <hr>
+          <button type="submit" class="btn btn-primary" >Submit</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal" >Close</button>
+
+
+      </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+<hr>
+<!-- displaying the data -->
+
+<table class="table ">
+  <thead>
+    <tr>
+    <th>Roll No</th>
+    <th>Name</th>
+    <th>Class</th>
+    <th>Parent Name</th>
+    <th>Contact Info</th>
+    <th>Parent Email</th>
+    </tr>
+  </thead>
+  <tbody >
+    <tr ng-repeat="student in students.loadstudents.results">
+    <td><button ng-click ="students.editstudent(student)" data-toggle="modal" data-target="#myModal" class="glyphicon glyphicon-pencil"></button> &nbsp; <button class = "glyphicon glyphicon-remove" ng-click="students.deletestudent(student)"></button>&nbsp; {{student.rollno}}</td>
+    <td>{{student.studentname}}</td>
+    <td>{{student.studentclass}}</td>
+    <td>{{student.parentname}}</td>
+    <td>{{student.contact}}</td>
+    <td>{{student.parentemail}}</td>
+   </tr>
+  </tbody>
+</table>
+
+</div>

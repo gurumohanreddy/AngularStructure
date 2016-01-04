@@ -1,0 +1,19 @@
+.navbar-default{
+  background-color: rgba(52, 73, 94,1.0);
+
+}
+.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand,.navbar-default .navbar-nav > li > a,.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
+  color:#FFF;
+}
+
+.navbar{
+  border-radius: 0px;
+  border-color: transparent;
+  margin-bottom: 0px;
+  // background-color: transparent;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus{
+    background-color:rgba(44, 62, 80,1.0);
+    color:#FFF;
+}

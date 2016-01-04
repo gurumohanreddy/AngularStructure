@@ -1,0 +1,11 @@
+<div class="container hometray">
+     <div class="row">
+        <div class="col-sm-6 col-md-4 col-xs-10" ng-repeat="entity in vm.entities">
+          <div class="thumbnail homescreenitems">
+            <div class="caption ">
+              <a ui-sref="{{entity.link}}"><h3>{{ entity.title }}</h3></a>
+            </div>
+          </div>
+        </div>
+      </div>
+   </div>

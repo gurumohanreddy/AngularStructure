@@ -3,16 +3,16 @@
   <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1  well loginwell">
 <h4 class="text-center header">Access your Dashboard</h4>
 <hr>
-        <form ng-submit = "login.enter()">
+        <form ng-submit = "vm.enter()">
             <div class="form-group">
 
               <div class="input-group">
               <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-user"></i></span>
-              <input type="text" class="form-control" placeholder="Username" autofocus ng-model="main.username"></div>
+              <input type="text" class="form-control" placeholder="Username" autofocus ng-model="vm.username"></div>
               <br>
               <div class="input-group">
               <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-lock"></i></span>
-              <input type="password" class="form-control" placeholder="Password" ng-model="main.password">
+              <input type="password" class="form-control" placeholder="Password" ng-model="vm.password">
             </div>
 
             </div>
