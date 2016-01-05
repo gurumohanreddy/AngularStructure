@@ -11,26 +11,26 @@
           <h4 class="modal-title" id="myModalLabel">Add student</h4>
         </div>
         <div class="modal-body">
-          <form ng-submit="students.addstudent()">
+          <form ng-submit="vm.addstudent()">
           <div class="form-group">
             <label for="studentname">Student Name</label>
-          <input type="text" class="form-control"  placeholder="Student Name" ng-model="vm.newstudent.studentname">
+          <input type="text" class="form-control"  placeholder="Student Name" ng-model="vm.newstudent.name">
           </div>
           <div class="form-group">
             <label for="parentname">Parent Name</label>
-          <input type="text" class="form-control" placeholder="Parent Name" ng-model="vm.newstudent.parentname">
+          <input type="text" class="form-control" placeholder="Parent Name" ng-model="vm.newstudent.parentName">
           </div>
           <div class="form-group">
             <label for="phone">Contact Info</label>
-          <input type="number" class="form-control"  placeholder="eg:9000000000" ng-model="vm.newstudent.contact">
+          <input type="number" class="form-control"  placeholder="eg:9000000000" ng-model="vm.newstudent.contactNumber">
           </div>
           <div class="form-group">
             <label for="parentemail">Parent email</label>
-          <input type="email" class="form-control"  placeholder="eg:something@gmail.com" ng-model="vm.newstudent.parentemail">
+          <input type="email" class="form-control"  placeholder="eg:something@gmail.com" ng-model="vm.newstudent.parentEmail">
           </div>
           <div class="form-group">
             <label for="class">Class</label>
-          <select class="form-control" ng-model="vm.newstudent.studentclass" >
+          <select class="form-control" ng-model="vm.newstudent.sectionId" >
             <option value="Kinder Garten">kindergarten</option>
             <option value="LKG">LKG</option>
             <option value="UKG">UKG</option>
@@ -38,7 +38,7 @@
           </div>
           <div class="form-group">
             <label for="roll_no">Roll No:</label>
-          <input type="number" class="form-control"  placeholder="123" ng-model="vm.newstudent.rollno">
+          <input type="number" class="form-control"  placeholder="123" ng-model="vm.newstudent.rollNum">
           </div>
 <!--
           <div class="form-group">
